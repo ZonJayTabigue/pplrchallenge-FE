@@ -1,38 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  margin-top: 20px;
+  height: 5vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-area {
+  /* background-color: red; */
+  margin: 10% auto 0 auto;
+  width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.search-form {
+  min-height: 50px;
+}
+
+.search-input {
+  line-height: 50px;
+  position: relative;
+  outline: none;
+  background: #faf5f2;
+  border: 1px solid #f80;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 90%;
+  color: #080808;
+}
+
+.search-input:hover {
+  background: #f0efee;
+}
+
+.search-input::placeholder {
+  color: #0f0f0f4d;
+}
+
+.search-btn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #f80;
   color: white;
+  border: none;
+  padding: 0.57rem;
+  cursor: pointer;
+  line-height: 50px;
+  width: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #383f4a;
+  /* margin-bottom: 0.5rem; */
+  font-size: 1.75rem;
+  font-weight: 750;
+  font-family: sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  /* background: #eaecee; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  padding: 0 50px;
+  
+  
+  /* align-items: center; */
+  
 }
+.flex-child {
+  flex: 1;
+}
+.flex-child:first-child {
+  margin-right: 50px;
+} 
+.user-area {
+  background-color: rgb(238, 216, 188);
+  /* background-image: linear-gradient(315deg, #f80 0%, #ffa52f 74%); */
+  border: 2px solid #f80;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+  /* flex: 0 0 20%; */
+}
+
+.property-area {
+  background-color: rgb(238, 216, 188);
+  /* background-image: linear-gradient(315deg, #f80 0%, #ffa52f 74%); */
+  border: 2px solid #f80;
+  
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+  /* flex: 2;
+  flex: 0 0 50%; */
+}
+
+.scroll-area {
+  padding: 10px;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll-area::-webkit-scrollbar {
+  /* margin-left: 20px; */
+  width: 2px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+  width: 2px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+
+
+.user-items {
+  background-color: #fff;
+  /* background-image: linear-gradient(315deg, #f80 0%, #ffa52f 74%); */
+  border: 2px solid #f80;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* background: #f80; */
+  color: #383f4a;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+
+/* @media screen and (max-width: 600px) {
+  h1 {
+    color: #fff;
+    margin-bottom: 0.2rem;
+    font-size: 1.75rem;
+  }
+  .search-input {
+    outline: none;
+    background: none;
+    border: 1px solid #ededed;
+    padding: 0.25rem .5rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    width: 150px;
+    color: #fff;
+  }
+  .search-btn {
+    background: #7F90A7;
+    color: #fff;
+    border: none;
+    padding: 0.38rem;
+    cursor: pointer;
+  }
+} */
