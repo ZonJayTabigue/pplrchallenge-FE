@@ -1,10 +1,10 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { gql, useQuery } from '@apollo/client'
 
-const GET_USERS = gql`
+
+
+export const Users = ({task, toggleComplete, deleteTodo, editTodo}) => {
+  const GET_USERS = gql`
   query getUsers {
     users {
       id
@@ -13,8 +13,6 @@ const GET_USERS = gql`
     }
   }
 `
-
-export const Users = ({task, toggleComplete, deleteTodo, editTodo}) => {
   
   const { loading, error, data } = useQuery(GET_USERS)
 

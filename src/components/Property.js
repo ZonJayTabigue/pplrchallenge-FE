@@ -1,7 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { gql, useQuery } from '@apollo/client'
 
 const GET_PROPERTIES = gql`
@@ -22,8 +19,8 @@ const GET_PROPERTIES = gql`
 `
 
 export const Property = ({task, toggleComplete, deleteTodo, editTodo}) => {
-  
   const { loading, error, data } = useQuery(GET_PROPERTIES)
+  
 
   console.log("Data: ", data);
 

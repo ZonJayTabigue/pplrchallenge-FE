@@ -16,13 +16,13 @@ body {
 }
 
 .logo {
-  margin-top: 20px;
-  height: 5vmin;
+  margin-top: 150px;
+  height: 7vmin;
 }
 
 .search-area {
   /* background-color: red; */
-  margin: 10% auto 0 auto;
+  margin: 2% auto 0 auto;
   width: 50%;
 }
 
@@ -65,7 +65,7 @@ body {
 
 h1 {
   color: #383f4a;
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.5rem;
   font-size: 1.75rem;
   font-weight: 750;
   font-family: sans-serif;
@@ -75,7 +75,7 @@ h1 {
   /* background: #eaecee; */
   display: flex;
   /* flex-direction: column; */
-  justify-content: space-around;
+  justify-content: center;
   padding: 0 50px;
   
   
@@ -85,16 +85,16 @@ h1 {
 .flex-child {
   flex: 1;
 }
-.flex-child:first-child {
-  margin-right: 50px;
-} 
-.user-area {
-  background-color: rgb(238, 216, 188);
+.result-area {
+  /* background-color: rgb(238, 216, 188); */
   /* background-image: linear-gradient(315deg, #f80 0%, #ffa52f 74%); */
-  border: 2px solid #f80;
-  margin-top: 5rem;
+  border: 1px solid rgba(92, 91, 91, 0.4);
+  border-bottom: none;
+  margin-top: 1rem;
   padding: 2rem;
-  border-radius: 5px;
+  width: 70%;
+  height: 650px;
+  /* border-radius: 5px; */
   /* flex: 0 0 20%; */
 }
 
@@ -123,14 +123,14 @@ h1 {
 }
 
 .scroll-area::-webkit-scrollbar-track {
-  background: white;        /* color of the tracking area */
+  background: white;
   width: 2px;
 }
 
 .scroll-area::-webkit-scrollbar-thumb {
-  background-color: blue;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid orange;  /* creates padding around scroll thumb */
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
 }
 
 
@@ -138,14 +138,10 @@ h1 {
 .user-items {
   background-color: #fff;
   /* background-image: linear-gradient(315deg, #f80 0%, #ffa52f 74%); */
-  border: 2px solid #f80;
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  /* background: #f80; */
+  border-bottom: 1px solid rgba(255, 136, 0, 0.5);
   color: #383f4a;
+  font-size: 20px;
   padding: 0.75rem 1rem;
-  border-radius: 5px;
   margin-bottom: 1rem;
   cursor: pointer;
 }

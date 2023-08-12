@@ -1,20 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import { Search } from './Search'
-import { Users } from './Users';
-import { getTodosApi, addTodoApi } from '../utils/Handler';
-import { Property } from './Property';
+import { Search } from './Search';
 import poplarlogo from '../poplar-logo.svg';
 import { SearchResults } from './SearchResults';
 
 export const Layout = () => {
-    const [todos, setTodos] = useState([]);
+    const [searchString, setSearchString] = useState("");
 
-    useEffect(() => {
-        getTodosApi(setTodos)
-    }, [])
-
-    const addTodo = todo => {
-        addTodoApi(todo, setTodos)
+    const searchKey = searchStr => {
+        setSearchString(searchStr)
     }
 
     
@@ -22,34 +15,18 @@ export const Layout = () => {
     <div className=''>
         <img className='logo' src={poplarlogo} alt='logo' />
         <div className='search-area'>
-            <Search addTodo={addTodo} isUser={true} />
+            <Search searchKey={searchKey} />
         </div>
-        {/* <SearchResults/> */}
-        {/* <div className='container'>
-            <div className='flex-child user-area'>
-                <h1>USERS</h1>
-
-                <div className='search-area'>
-                    <Search addTodo={addTodo} isUser={true} />
+        <div className='container'>
+            {(searchString === "") ? <></> : (
+                <div className='result-area'>
+                    <h1>Results</h1>
+                    <div className='scroll-area'>
+                        <SearchResults searchKey={searchString}/>
+                    </div>
                 </div>
-
-                <div className='scroll-area'>
-                    <Users />
-                </div>
-            </div>
-            <div className='flex-child property-area'>
-                <h1>PROPERTIES</h1>
-
-                <div className='search-area'>
-                    <Search addTodo={addTodo} isUser={false} />
-                </div>
-
-                <div className='scroll-area'>
-                    <Property />
-                </div>
-            </div>
-            
-        </div> */}
+            )}
+        </div>
     </div>
   )
 }

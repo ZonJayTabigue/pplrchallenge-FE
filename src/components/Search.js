@@ -1,18 +1,18 @@
 import React, {useState} from 'react'
 
-export const Search = ({addTodo, isUser}) => {
+export const Search = ({searchKey}) => {
     const [value, setValue] = useState("")
 
     const handleSubmit = e => {
         e.preventDefault();
-        addTodo(value);
-        setValue("");
+        searchKey(value);
+        // setValue("");
     }
   return (
     <form className='search-form' onSubmit={handleSubmit}>
         <input 
             type='text'className='search-input' value={value}
-            placeholder={ isUser ? 'Search user...' : 'Search property...' }
+            placeholder='Search...'
             onChange={(e) => setValue(e.target.value)} 
         />
 
