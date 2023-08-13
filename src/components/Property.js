@@ -40,10 +40,6 @@ export const Property = ({task, toggleComplete, deleteTodo, editTodo}) => {
                     <br />
                     <span> Rent: {property.rent}</span>
                 </div>
-                {/* <div>
-                    <FontAwesomeIcon icon={faPencilAlt} onClick={() => editTodo(task._id)} />
-                    <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task._id)} />
-                  </div> */}
             </div>
           ))
         )
